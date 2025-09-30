@@ -23,4 +23,4 @@ A página apresenta:
 - Deploy no **GitHub Pages**.  
 
 ## 🌐 GitHub Pages
-[🔗 Aceder ao projeto no GitHub Pages](https://teu-usuario.github.io/de-patria-para-patria/)
+https://p3drofaustino-lang.github.io/web_project_homeland/
