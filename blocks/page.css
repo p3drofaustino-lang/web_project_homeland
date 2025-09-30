@@ -6,28 +6,8 @@
   font-weight:400;
 }
 
-/* container global para centralizar/limitar conteúdo */
-.container{
-  max-width:1184px;                          /* TODO se o Figma usar outro */
-  margin-inline: auto;
-  padding-inline: 48px;     /* podes trocar por valores fixos por breakpoint se o Figma pedir */
-}
-
 img {
   display: block;
   max-width: 100%;
   height: auto}
 
-/* breakpoints do projeto */
-@media (max-width:1024px){
-  .container{
-    max-width:768px;                         /* TODO se o Figma usar outro */
-    padding-inline: 32px;
-  }
-}
-@media (max-width:544px){
-  .container{
-    max-width:100%;
-    padding-inline: 16px;                     /* TODO se o Figma usar outro */
-  }
-}
