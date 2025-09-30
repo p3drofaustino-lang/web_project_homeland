@@ -1,0 +1,74 @@
+/* ===== Intro ===== */
+.intro{
+  padding-block: 92px 92px;
+}
+
+.intro .container{
+  display: grid;
+  gap: 16px;
+  text-align: left;     /* todo o texto aninhado à esquerda */
+}
+
+/* ===== Título ===== */
+.intro__title{
+  margin: 0 0 40px;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 900;                 /* TODO: confirmar no Figma */
+  font-size: 54px;                  /* TODO Desktop */
+  line-height: 1.0;                /* TODO Desktop */
+  letter-spacing: 0;                /* TODO se houver tracking */
+}
+
+/* ===== Citação ===== */
+.intro__quote {
+  margin: 0 0 10px;
+  color: rgba(255,255,255,.75);
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;                 /* TODO */
+  font-size: 24px;                  /* TODO Desktop */
+  line-height: 1.4;                /* TODO Desktop */
+  letter-spacing: 0;                /* TODO */
+}
+
+/* ===== Autor ===== */
+.intro__author{
+  margin: 0 0 32px;
+  justify-self: end;                /* força alinhar à direita */
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;                 /* TODO */
+  font-size: 24px;                  /* TODO Desktop */
+  line-height: 1.4;                /* TODO Desktop */
+  letter-spacing: 0;                /* TODO */
+  color: rgba(255,255,255,.75);
+}
+
+/* ===== Conteúdo ===== */
+.intro__content{
+  margin: 0 0 40px;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;                 /* TODO */
+  font-size: 16px;                  /* TODO Desktop */
+  line-height: 1.6;                /* TODO Desktop */
+  letter-spacing: 0;                /* TODO */
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  opacity: .95;
+}
+
+/* ===== Tablet ===== */
+@media (max-width:1024px){
+  .intro{ padding-block: 90px 88px; }
+  .intro__title{ font-size: 45px; line-height: 1.0; margin: 0 0 50px;}
+  .intro__author{ font-size: 24px; line-height: 1.4; margin: 0 0 32px;}
+  .intro__quote{ font-size: 24px; line-height: 1.4; }
+  .intro__content{ font-size: 16px; line-height: 1.6; }
+}
+
+/* ===== Mobile ===== */
+@media (max-width:544px){
+  .intro{ padding-block: 64px 64px; }
+  .intro__title{ font-size: 32px; line-height: 1.0; margin: 0 0 40px;}
+  .intro__author{ font-size: 24px; line-height: 1.4; margin: 0 0 32px;}
+  .intro__quote{ font-size: 24px; line-height: 1.25; margin: 0 0 10px;}
+  .intro__content{ font-size: 16px; line-height: 1.6; }
+}
