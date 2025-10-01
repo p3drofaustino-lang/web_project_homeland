@@ -13,10 +13,10 @@
 /* Tipografia / Desktop */
 .header__title{
   margin: 0 0 32px;
-  font-weight: 900;                 /* TODO */
-  font-size: 96px;                  /* TODO Desktop */
-  line-height: 1.0;                /* TODO */
-  letter-spacing: 0px;              /* TODO */
+  font-weight: 900;                 
+  font-size: 96px;                  
+  line-height: 1.0;                
+  letter-spacing: 0px;              
 }
 .header__subtitle{
   margin:0 0 64px;

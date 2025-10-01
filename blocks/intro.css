@@ -4,9 +4,19 @@
 }
 
 .intro .container{
+  max-width: 1184px;
+  display: grid;
+  margin-inline: auto;
+  padding-inline: 48px;
+}
+
+/* coluna de texto com recuos específicos */
+.intro__content-area {
+  margin-left: 148px;   /* medida do Figma */
+  margin-right: 302px;  /* medida do Figma */
   display: grid;
   gap: 16px;
-  text-align: left;     /* todo o texto aninhado à esquerda */
+  text-align: left;
 }
 
 /* ===== Título ===== */
@@ -46,10 +56,10 @@
 .intro__content{
   margin: 0 0 40px;
   font-family: Inter, Arial, sans-serif;
-  font-weight: 400;                 /* TODO */
-  font-size: 16px;                  /* TODO Desktop */
-  line-height: 1.6;                /* TODO Desktop */
-  letter-spacing: 0;                /* TODO */
+  font-weight: 400;                 
+  font-size: 16px;                  
+  line-height: 1.6;                
+  letter-spacing: 0;                
   overflow-wrap: anywhere;
   hyphens: auto;
   opacity: .95;
@@ -58,6 +68,10 @@
 /* ===== Tablet ===== */
 @media (max-width:1024px){
   .intro{ padding-block: 90px 88px; }
+  .intro__content-area {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
   .intro__title{ font-size: 45px; line-height: 1.0; margin: 0 0 50px;}
   .intro__author{ font-size: 24px; line-height: 1.4; margin: 0 0 32px;}
   .intro__quote{ font-size: 24px; line-height: 1.4; }
@@ -67,6 +81,10 @@
 /* ===== Mobile ===== */
 @media (max-width:544px){
   .intro{ padding-block: 64px 64px; }
+  .intro__content-area {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
   .intro__title{ font-size: 32px; line-height: 1.0; margin: 0 0 40px;}
   .intro__author{ font-size: 24px; line-height: 1.4; margin: 0 0 32px;}
   .intro__quote{ font-size: 24px; line-height: 1.25; margin: 0 0 10px;}
