@@ -1,3 +1,22 @@
+:root{
+  /* container (mantém os do P5) */
+  --max: 1184px;
+  --pad-desktop: 48px;
+  --pad-tablet: 32px;
+  --pad-mobile: 16px;
+
+  /* gaps */
+  --gap-lg: 24px;
+  --gap-md: 16px;
+  --gap-sm: 12px;
+
+  /* efeitos */
+  --shadow-soft: 0 8px 24px rgba(0,0,0,.18);
+  --shadow-img:  0 12px 40px rgba(0,0,0,.30);
+  --grad-primary: linear-gradient(135deg, #0278FE 0%, #5AC8FA 100%);
+  --overlay-dark: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.35) 100%);
+}
+
 .page{
   min-height:100vh;
   background:#2A2C2F;
