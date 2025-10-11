@@ -1,0 +1,254 @@
+.places {
+  padding-block: 92px 90px;
+}
+
+.places .container {
+  max-width: 1184px;
+  margin-inline: auto;
+  padding-inline: 48px;
+  display: grid;
+  row-gap: 80px; /* espaço entre artigos */
+}
+
+.place {
+  display: grid;
+  grid-template-columns: 460px 1fr; /* img à esq., texto à dir. */
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "title    website"
+    "image    text"
+    "button   text";
+  column-gap: 40px;
+  row-gap: 48px;
+  align-items: start;
+}
+
+/* --- Ligação das áreas --- */
+.place__title  { grid-area: title;  margin: 0; }
+.place__url    { grid-area: website; margin: 0; align-self: end; }
+.place__media  { grid-area: image;  position: relative; overflow: hidden; border-radius: 16px;
+                 box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, 0.5); }
+.place__text   { grid-area: text;   display: grid; gap: 25px; max-width: 56ch; }
+.place__button { grid-area: button; justify-self: start; }
+
+/* se mantiveres o wrapper .place__body no HTML, usa contents para ele "sumir" no grid */
+.place__body { display: contents; }
+
+/* imagem */
+.place__image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* hover/focus na imagem (link) */
+.place__media::after{
+  content:""; position:absolute; inset:0; background: rgba(0,0,0,0); transition: background .25s ease;
+}
+.place__media-link:hover .place__media{
+  transform: translateY(-2px);
+  box-shadow: 14px 14px 32px rgba(0,0,0,.55);
+  filter: brightness(1.03) saturate(1.05);
+}
+.place__media-link:hover .place__media::after{ background: rgba(0,0,0,.12); }
+.place__media-link:focus-visible{ box-shadow: 0 0 0 3px rgba(2,120,254,.35); border-radius:16px; }
+
+/* tipografia */
+.place__title {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 900;        /* se no Figma for Bold, troca para 700 */
+  font-size: 72px;         /* usaste 72px; mantém se for o valor do Figma */
+  line-height: 1.04;       /* confere no Inspect */
+  color: #fff;
+}
+
+.place__url {
+  grid-area: website;
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.35;
+  letter-spacing: 0.12em; /* 12% tracking */
+  color: rgba(170, 170, 170, 1);
+}
+
+/* Só o rótulo em uppercase; nomes brancos sem “efeito de link” */
+.place__label  { display: block; text-transform: uppercase; color: rgba(170,170,170,1); }
+.place__names  { display: block; margin-top: 8px; text-transform: none; letter-spacing: normal; color: #fff; line-height: 1.4; }
+
+/* links dentro do bloco URL/nomes */
+.place__link {
+  color: #0278FE;
+  text-decoration: none;
+}
+.place__link:hover { text-decoration: underline; }
+
+.place__text {
+  font-size: 18px;
+  line-height: 1.63;
+  color: rgba(255, 255, 255, .9);
+}
+
+/* nomes como texto (sem aparência de link) */
+.place__link {
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
+}
+.place__link:hover, .place__link:focus { text-decoration: none; filter: none; }
+
+/* botão (adiciona class="button button--primary place__button" no HTML) */
+.button--primary {
+  background: linear-gradient(135deg, #0278FE 0%, #5AC8FA 100%);
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+  padding: 14px 22px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.button--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(2,120,254,.35);
+  filter: saturate(1.05);
+}
+
+
+/* ===== Tablet ≤1024px ===== */
+@media (max-width:1024px) {
+  .places .container {
+    max-width: 768px;
+    padding-inline: 32px;
+    gap: 48px;
+  }
+  .place {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .place__title {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+  .place__text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+/* ===== Tablet (768px) ===== */
+@media (max-width: 1024px) {
+  .places {
+    padding-block: 88px 90px;
+  }
+
+  .places .container {
+    max-width: 768px;
+    padding-inline: 32px;
+    row-gap: 64px; /* espaço entre artigos */
+  }
+
+  .place {
+    grid-template-columns: 340px 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "title website"
+      "image text"
+      "button text";
+    column-gap: 28px;
+    row-gap: 48px; /* distância vertical entre elementos */
+    align-items: start;
+  }
+
+  .place__media {
+    border-radius: 14px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .place__title {
+    font-size: 42px;
+    line-height: 1.1;
+    font-weight: 900;
+  }
+
+  .place__text {
+    font-size: 16px;
+    line-height: 1.63;
+    gap: 25px;
+  }
+
+  .place__button {
+    justify-self: start;
+  }
+}
+
+/* ===== Mobile (320px) ===== */
+@media (max-width: 544px) {
+  /* padding da seção */
+  .places { 
+    padding-block: 62px 104px; 
+  }
+
+  /* espaço entre cards (place → place) */
+  .places .container {
+    max-width: 100%;
+    padding-inline: 16px;
+    row-gap: 50px;                 
+  }
+
+  /* layout: 1 coluna; distâncias internas de 30px */
+  .place {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "website"
+      "image"
+      "text"
+      "button";
+    column-gap: 0;
+    row-gap: 30px;                 
+    align-items: start;
+  }
+
+  /* tipografia */
+  .place__title {
+    font-size: 32px;
+    line-height: 1.1;              
+    font-weight: 900;
+  }
+
+  .place__url {
+    font-size: 12px;
+    line-height: 1;                 
+    letter-spacing: 0.12em;         
+    text-transform: uppercase;      
+  }
+  .place__label { text-transform: uppercase; }
+  .place__names { color: #fff; text-transform: none; letter-spacing: normal; }
+
+  /* texto: tipografia mantém-se */
+  .place__text {
+    font-size: 16px;               
+    line-height: 1.63;             /
+    gap: 25px;                     
+  }
+
+  /* mídia */
+  .place__media { 
+    border-radius: 12px; 
+    box-shadow: 6px 6px 16px rgba(0,0,0,.35);
+  }
+  .place__image {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+}
+
+
+
+
