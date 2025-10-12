@@ -6,6 +6,8 @@
   cursor: pointer;
   text-decoration: none;
   transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+  grid-area: button; 
+  justify-self: start;
 }
 
 .button--primary {

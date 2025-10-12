@@ -29,7 +29,6 @@
 .place__media  { grid-area: image;  position: relative; overflow: hidden; border-radius: 16px;
                  box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, 0.5); }
 .place__text   { grid-area: text;   display: grid; gap: 25px; max-width: 56ch; }
-.place__button { grid-area: button; justify-self: start; }
 
 /* imagem */
 .place__image {
