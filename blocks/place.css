@@ -111,6 +111,34 @@
 }
 .place__link:hover, .place__link:focus { text-decoration: none; filter: none; }
 
+.place__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+  grid-area: button; 
+  justify-self: start;
+}
+
+.place__button--primary {
+  background: linear-gradient(135deg, #0278FE 0%, #5AC8FA 100%);
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+  padding: 14px 22px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.place__button--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(2, 120, 254, .35);
+  filter: saturate(1.05);
+}
+
 /* ===== Tablet ≤1024px ===== */
 @media (max-width:1024px) {
   .places .container {
