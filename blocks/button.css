@@ -1,19 +1,25 @@
-/* botão (adiciona class="button button--primary place__button" no HTML) */
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+
 .button--primary {
   background: linear-gradient(135deg, #0278FE 0%, #5AC8FA 100%);
   color: #fff;
   border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
   padding: 14px 22px;
   font-weight: 600;
   font-size: 16px;
-  text-decoration: none;
-  display: inline-flex;
-  justify-content: center;
-  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
 }
+
 .button--primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 12px 32px rgba(2,120,254,.35);
+  box-shadow: 0 12px 32px rgba(2, 120, 254, .35);
   filter: saturate(1.05);
 }

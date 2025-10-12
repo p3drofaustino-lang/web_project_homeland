@@ -31,9 +31,6 @@
 .place__text   { grid-area: text;   display: grid; gap: 25px; max-width: 56ch; }
 .place__button { grid-area: button; justify-self: start; }
 
-/* se mantiveres o wrapper .place__body no HTML, usa contents para ele "sumir" no grid */
-.place__body { display: contents; }
-
 /* imagem */
 .place__image {
   width: 100%;
@@ -75,15 +72,31 @@
 }
 
 /* Só o rótulo em uppercase; nomes brancos sem “efeito de link” */
-.place__label  { display: block; text-transform: uppercase; color: rgba(170,170,170,1); }
-.place__names  { display: block; margin-top: 8px; text-transform: none; letter-spacing: normal; color: #fff; line-height: 1.4; }
+.place__label {
+  display: block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  color: rgba(170, 170, 170, 1);
+}
 
-/* links dentro do bloco URL/nomes */
+.place__names {
+  display: block;
+  margin-top: 8px;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #fff;
+  line-height: 1.4;
+}
+
 .place__link {
+  display: block;
   color: #0278FE;
   text-decoration: none;
 }
-.place__link:hover { text-decoration: underline; }
+
+.place__link:hover {
+  text-decoration: underline;
+}
 
 .place__text {
   font-size: 18px;
@@ -213,7 +226,7 @@
   /* texto: tipografia mantém-se */
   .place__text {
     font-size: 16px;               
-    line-height: 1.63;             /
+    line-height: 1.63;             
     gap: 25px;                     
   }
 
