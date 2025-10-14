@@ -1,0 +1,21 @@
+/* blocks/button/button.css */
+.button {
+  display: inline-flex; justify-content: center; align-items: center;
+  border: none; cursor: pointer; text-decoration: none;
+  font: 600 16px/1.2 Inter, Arial, sans-serif;
+  border-radius: 10px; padding: 14px 22px;
+  transition: transform .2s, box-shadow .2s, filter .2s;
+}
+
+.button--primary {
+  background: linear-gradient(135deg, #0278FE 0%, #5AC8FA 100%);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+
+.button--primary:hover {
+  background: rgba(42, 44, 47, 1);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  filter: none;
+}
